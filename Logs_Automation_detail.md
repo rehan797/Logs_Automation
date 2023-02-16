@@ -11,15 +11,15 @@ In the next task it will essentially upgrade the existing automation.sh script s
 4. The script checks for the presence of the inventory.html file in /var/www/html/; if not found, creates it. This file will essentially serve as a web page to get the      metadata of the archived logs (Hitting ip/inventory.html will show the bookkeeping data).
 5. The first line in the inventory.html file should be a header that will look like this
 
-    Log Type      Date Created        Type     Size
+    Log Type       Date Created         Type      Size
 
 6. If an inventory file already exists, the content of the file will not be deleted or overwritten. New content will only be appended in a new line.
 7. The inventory file looks like the following after multiple runs:
 
-    Log Type      Date Created        Type     Size     
-    httpd-logs    01012022-120100     tar      10K
-    httpd-logs    02012022-120100     tar      40K
-    httpd-logs    03012022-120100     tar      4K
+    Log Type       Date Created         Type      Size     
+    httpd-logs     01012022-120100      tar       10K
+    httpd-logs     02012022-120100      tar       40K
+    httpd-logs     03012022-120100      tar       4K
     
 8. It will then delete the tar file previously created to avoid consumption of disk space, and it will also remove the logs.
 9. All these tasks can be automated by setting up the cronjob.
